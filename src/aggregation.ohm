@@ -1,0 +1,18 @@
+SQLAggregation {
+	Expr = SelectClause FromClause
+  
+	SelectClause = select SelectColumnList
+	SelectColumnList = SelectColumn (SelectDelimiter SelectColumn)* 
+  SelectColumn =  (~(SelectDelimiter | keywords) any)* 
+  SelectDelimiter = ","
+
+  FromClause = from FromClauseTable
+  FromClauseTable = any*
+ 
+  select = caseInsensitive<"SELECT">
+  from = caseInsensitive<"FROM">
+    
+  keywords =
+    select
+    | from
+}

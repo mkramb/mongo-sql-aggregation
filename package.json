@@ -1,0 +1,17 @@
+{
+  "name": "mongo-sql-aggregation",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "pnpm run -r lint",
+    "generate": "ohm generateBundles --withTypes 'src/*.ohm'",
+    "remove-node-modules": "npx npkill"
+  },
+  "devDependencies": {
+    "@ohm-js/cli": "^2.0.0",
+    "@types/node": "^20.11.14",
+    "prettier": "^3.2.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
