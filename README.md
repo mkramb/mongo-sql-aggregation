@@ -25,19 +25,19 @@ db.users.aggregate([
         $gte: new ISODate( "2020-01-30"),
         $lte: new ISODate( "2020-02-30")
       }
-  },
-    num_orders: {
-      $gt: 10
+      "num_orders: {
+        $gt: 10
+      }
     }
   },
   {
     $sort: {
-    "number_order" : -1
+      "number_order" : -1
     }
   },
   {
     $project: {
-    _id: 0,
+      _id: 0,
       "first_name": 1,
       "last_name": 1
     }
