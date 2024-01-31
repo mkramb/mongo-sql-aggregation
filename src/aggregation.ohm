@@ -1,8 +1,8 @@
 SQLAggregation {
-	Expr = SelectClause FromClause
-  
-	SelectClause = select SelectColumnList
-	SelectColumnList = SelectColumn (SelectDelimiter SelectColumn)* 
+  Expr = SelectClause FromClause
+ 
+  SelectClause = select SelectColumnList
+  SelectColumnList = SelectColumn (SelectDelimiter SelectColumn)* 
   SelectColumn =  (~(SelectDelimiter | keywords) any)* 
   SelectDelimiter = ","
 
